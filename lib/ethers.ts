@@ -1,5 +1,5 @@
 'use client';
-import { Mnemonic, HDNodeWallet, Wallet, isAddress, JsonRpcProvider, formatEther, Contract } from 'ethers';
+import { Mnemonic, HDNodeWallet, Wallet, isAddress, JsonRpcProvider, formatEther, Contract, formatUnits } from 'ethers';
 
 // Add a 'type' property to classify networks and remove deprecated ones
 export const NETWORKS = {
@@ -172,7 +172,7 @@ export async function getTokenBalance(contractAddress: string, userAddress: stri
     try {
         const balance = await contract.balanceOf(userAddress);
         const decimals = await contract.decimals();
-        return parseFloat(formatEther(balance, decimals)).toFixed(4);
+        return parseFloat(formatUnits(balance, decimals)).toFixed(4);
     } catch {
         throw new Error('Failed to fetch token balance.');
     }
