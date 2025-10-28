@@ -38,11 +38,25 @@ export const NETWORKS = {
     currency: "BNB",
     type: 'mainnet' as const,
   },
+  base: {
+    name: "Base",
+    rpcUrl: "https://base.llamarpc.com",
+    explorerUrl: "https://basescan.org",
+    currency: "ETH",
+    type: 'mainnet' as const,
+  },
   sepolia: {
     name: "Sepolia Testnet",
     rpcUrl: "https://eth-sepolia.public.blastapi.io",
     explorerUrl: "https://sepolia.etherscan.io",
     currency: "SepoliaETH",
+    type: 'testnet' as const,
+  },
+  "base-sepolia": {
+    name: "Base Sepolia",
+    rpcUrl: "https://base-sepolia-rpc.publicnode.com",
+    explorerUrl: "https://sepolia.basescan.org/",
+    currency: "BaseSepoliaETH",
     type: 'testnet' as const,
   },
   holesky: { // Replaced Polygon zkEVM

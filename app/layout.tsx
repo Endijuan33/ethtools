@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Ethereum Address Converter",
   description: "Securely convert mnemonic phrases or private keys to Ethereum public addresses, client-side.",
+  icons: {
+    icon: "/placeholder-logo.svg",
+  },
 };
 
 export default function RootLayout({
