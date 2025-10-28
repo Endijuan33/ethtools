@@ -10,7 +10,7 @@ export default function FooterCredit() {
         className="inline-flex flex-col items-center text-gray-400 hover:text-white transition-colors"
       >
         <Github size={28} />
-        <p className="mt-1 text-sm">Built by endijuan33</p>
+        <p className="mt-1 text-sm">Built by endcore</p>
       </a>
     </footer>
   );
