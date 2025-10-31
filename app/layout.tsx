@@ -6,13 +6,17 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ethereum Address Converter",
-  description: "Securely convert mnemonic phrases or private keys to Ethereum public addresses, client-side.",
+  description:
+    "Securely convert mnemonic phrases or private keys to Ethereum public addresses, client-side.",
   icons: {
     icon: "/placeholder-logo.svg",
   },
   openGraph: {
     title: "Ethereum Address Converter",
-    description: "Convert mnemonics or private keys to public addresses securely.",
+    description:
+      "Convert mnemonics or private keys to public addresses securely.",
+    url: "https://ethtools.vercel.app",
+    siteName: "Ethereum Tools",
     images: [
       {
         url: "https://ethtools.vercel.app/placeholder-logo.png",
@@ -25,12 +29,14 @@ export const metadata: Metadata = {
   other: {
     "fc:frame": "vNext",
     "fc:frame:image": "https://ethtools.vercel.app/placeholder-logo.png",
+    "fc:frame:image:aspect_ratio": "1.91:1",
     "fc:frame:button:1": "Open App",
     "fc:frame:button:1:action": "link",
     "fc:frame:button:1:target": "https://ethtools.vercel.app",
     "fc:frame:button:2": "GitHub",
     "fc:frame:button:2:action": "link",
     "fc:frame:button:2:target": "https://github.com/endijuan33",
+    "fc:frame:post_url": "https://ethtools.vercel.app/api/frame",
   },
 };
 
