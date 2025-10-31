@@ -14,10 +14,14 @@ export default function ClientLayout({
       window.location !== window.parent.location;
 
     if (isMiniApp) {
+      // === FIX: Allow scrolling ===
       document.documentElement.classList.add("farcaster-miniapp");
-      document.body.style.overflow = "hidden";
-      document.documentElement.style.height = "695px";
+      document.body.style.overflowY = "auto";
+      document.body.style.overflowX = "hidden";
+      document.body.style.height = "auto";
+      document.documentElement.style.height = "auto";
 
+      // SDK Load
       import("@farcaster/miniapp-sdk")
         .then(({ sdk }) => {
           sdk.actions.ready();
@@ -31,6 +35,7 @@ export default function ClientLayout({
         .catch((err) => console.warn("SDK load failed:", err));
     }
 
+    // Close Button
     const closeBtn = document.createElement("button");
     closeBtn.innerHTML = "×";
     closeBtn.className = "farcaster-miniapp-close";
@@ -47,6 +52,7 @@ export default function ClientLayout({
 
     return () => {
       if (closeBtn.parentNode) closeBtn.parentNode.removeChild(closeBtn);
+      // Optional: cleanup styles if needed
     };
   }, []);
 

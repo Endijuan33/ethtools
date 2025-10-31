@@ -96,3 +96,13 @@ body {
   align-items: center !important;
   justify-content: center !important;
 }
+
+
+/* ------------------------------------------------------------------ */
+/*  Smooth Scrolling                                                  */
+/* ------------------------------------------------------------------ */
+/* Smooth scroll in Mini App */
+.farcaster-miniapp {
+  -webkit-overflow-scrolling: touch; /* iOS momentum scroll */
+  overscroll-behavior: contain;      /* Prevent pull-to-refresh conflict */
+}
