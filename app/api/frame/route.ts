@@ -19,7 +19,7 @@ export async function GET() {
     {
       status: 200,
       headers: {
-        "Content-Type": "text/html",
+        "Content-Type": "text/html; charset=utf-8",
       },
     }
   );
