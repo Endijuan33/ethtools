@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ------------------------------------------------------------------ */
-/*  Color variables – unchanged (light / dark mode)                   */
+/*  Color variables – light / dark mode                                */
 /* ------------------------------------------------------------------ */
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -20,7 +20,7 @@
 }
 
 /* ------------------------------------------------------------------ */
-/*  Base page layout – keep the gradient and centering                */
+/*  Base page layout – gradient background and basic padding           */
 /* ------------------------------------------------------------------ */
 body {
   color: rgb(var(--foreground-rgb));
@@ -31,39 +31,46 @@ body {
     )
     rgb(var(--background-start-rgb));
 
-  /* Center the content */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block; /* flexible */
   min-height: 100vh;
-  padding: 1rem; /* Add some padding for smaller screens */
+  padding: 1rem; /* for small screen */
 }
 
 /* ------------------------------------------------------------------ */
-/*  Farcaster Mini App mode – added by layout.tsx                     */
+/*  Farcaster Mini App – scrollable & responsive                      */
 /* ------------------------------------------------------------------ */
 .farcaster-miniapp {
-  /* Force the app to fit the 424 px wide iframe */
+  /* Ukuran dan layout */
   max-width: 424px !important;
   margin: 0 auto;
   padding: 0.5rem;
   box-sizing: border-box;
   font-size: 16px;
-  overflow: hidden;
+
+  /* Scroll */
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;           /* Smooth scroll modern */
+  -webkit-overflow-scrolling: touch; /* iOS momentum scroll */
+  overscroll-behavior: contain;      /* cegah pull-to-refresh */
 }
 
-/* Make every interactive element tappable in WebView */
+/* ------------------------------------------------------------------ */
+/*  Interactive elements – tappable di WebView                        */
+/* ------------------------------------------------------------------ */
 .farcaster-miniapp input,
 .farcaster-miniapp textarea,
 .farcaster-miniapp button,
 .farcaster-miniapp select {
-  font-size: 16px !important;      /* iOS/Android minimum tap size */
+  font-size: 16px !important;  /* Minimum tap size iOS/Android */
   padding: 12px !important;
-  min-height: 44px;                /* Apple HIG tap target */
+  min-height: 44px;            /* Apple HIG tap target */
   border-radius: 8px;
 }
 
-/* Optional warning banner shown only inside Mini App */
+/* ------------------------------------------------------------------ */
+/*  Optional warning banner inside Mini App                             */
+/* ------------------------------------------------------------------ */
 .farcaster-miniapp .miniapp-warning {
   background: #ff9800;
   color: #fff;
@@ -76,7 +83,7 @@ body {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Close-button that layout.tsx injects                              */
+/*  Close button injected by layout.tsx                                */
 /* ------------------------------------------------------------------ */
 .farcaster-miniapp-close {
   position: fixed !important;
@@ -95,14 +102,4 @@ body {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-}
-
-
-/* ------------------------------------------------------------------ */
-/*  Smooth Scrolling                                                  */
-/* ------------------------------------------------------------------ */
-/* Smooth scroll in Mini App */
-.farcaster-miniapp {
-  -webkit-overflow-scrolling: touch; /* iOS momentum scroll */
-  overscroll-behavior: contain;      /* Prevent pull-to-refresh conflict */
 }
