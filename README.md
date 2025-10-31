@@ -47,32 +47,25 @@ A secure, client-side web application to convert a BIP-39 mnemonic or an Ethereu
 
 3.  **Set Up Environment Variables**
 
-    This project uses environment variables to manage RPC endpoints for different networks. Copy the example file to create your local configuration:
+    This project uses environment variables to manage Explorer endpoints for different networks. Copy the example file to create your local configuration:
 
     ```bash
     cp .env.example .env.local
     ```
 
-    Now, edit the `.env.local` file and add your RPC URLs. It is highly recommended to use a dedicated RPC provider for reliability.
+    Now, edit the `.env.local` file and add routescan URLs.
 
     ```env
-    # Mainnet RPC - public nodes are not recommended for production
-    NEXT_PUBLIC_RPC_MAINNET=https://eth.llamarpc.com
+    # to allow pnpm build (standard environment configuration for vercel production)
+    PNPM_APPROVE_BUILD=true
 
-    # Testnet RPCs - replace with your own API keys
-    NEXT_PUBLIC_RPC_SEPOLIA=https://sepolia.infura.io/v3/YOUR_INFURA_API_KEY
-    NEXT_PUBLIC_RPC_HOLESKY=https://holesky.infura.io/v3/YOUR_INFURA_API_KEY
+    # Mainnet Explorer
+    NEXT_PUBLIC_ROUTESCAN_MAINNET=https://routescan.io
 
-    # Default network to display on load
-    NEXT_PUBLIC_DEFAULT_NETWORK=mainnet
+    # Testnet Explorer
+    NEXT_PUBLIC_ROUTESCAN_TESTNET=https://testnet.routescan.io
+
     ```
-
-    **Recommended RPC Providers:**
-
-    -   [Infura](https://infura.io) - Reliable, free tier available with API key.
-    -   [Alchemy](https://alchemy.com) - Robust, free tier available with API key.
-    -   [QuickNode](https://quicknode.com) - High-performance, free tier available.
-    -   [LlamaRPC](https://llamarpc.com) - Public, no API key needed, but not recommended for production use.
 
 4.  **Run the Development Server**
 
@@ -133,7 +126,7 @@ The project is organized as follows:
 │   ├── page.tsx        # Main application page
 │   └── layout.tsx      # Root layout
 ├── public/             # Static assets
-├── .env.local          # Local environment variables (DO NOT COMMIT)
+├── .env.local          # Local environment variables
 ├── next.config.js      # Next.js configuration
 └── package.json        # Project dependencies and scripts
 ```
@@ -188,7 +181,7 @@ This Next.js application is optimized for deployment on platforms like Vercel or
 
 ## 📝 License
 
-This project is licensed under the **MIT License**. Feel free to use, modify, and distribute it for personal and commercial purposes. See the `LICENSE` file for more details.
+This project is licensed under the **MIT License**. Feel free to use, modify, and distribute it for personal and commercial purposes. See the [`LICENSE`](/LICENSE) file for more details.
 
 ## 🤝 Contributing
 
