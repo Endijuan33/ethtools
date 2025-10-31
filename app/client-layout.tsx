@@ -21,13 +21,11 @@ export default function ClientLayout({
       import("@farcaster/miniapp-sdk")
         .then(({ sdk }) => {
           sdk.actions.ready();
-
           sdk.getCapabilities().then((caps) => {
             if (caps.includes("haptics.impactOccurred")) {
               sdk.haptics.impactOccurred("light");
             }
           });
-
           (window as any).farcasterSDK = sdk;
         })
         .catch((err) => console.warn("SDK load failed:", err));
