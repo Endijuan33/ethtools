@@ -1,0 +1,18 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjkzNDkzNCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDk2MTUzMWE3NTY1NEI5Rjk3NDNGNEVkRTkyYTcyODlhMzFiNjZCRDcifQ",
+    "payload": "eyJkb21haW4iOiJldGh0b29scy52ZXJjZWwuYXBwIn0",
+    "signature": "7+9KvtDuD2Bac+FvuTp3IcMz1MDPX6EeaSXH4fWrKhNHAjEmQ9QBmD4OxKezSadMJj5LazrHFtuwBRXlqQ6R8Rw="
+  },
+  "frame": {
+    "version": "1",
+    "name": "Eth Tools",
+    "iconUrl": "https://ethtools.vercel.app/placeholder-logo.png",
+    "homeUrl": "https://ethtools.vercel.app",
+    "imageUrl": "https://ethtools.vercel.app/placeholder.png",
+    "buttonTitle": "Check this out",
+    "splashImageUrl": "https://ethtools.vercel.app/placeholder.jpg",
+    "splashBackgroundColor": "#eeccff",
+    "webhookUrl": "https://ethtools.vercel.app/"
+  }
+}
