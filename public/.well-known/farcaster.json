@@ -10,9 +10,6 @@
     "iconUrl": "https://ethtools.vercel.app/placeholder-logo.png",
     "homeUrl": "https://ethtools.vercel.app",
     "imageUrl": "https://ethtools.vercel.app/placeholder.png",
-    "buttonTitle": "Check this out",
-    "splashImageUrl": "https://ethtools.vercel.app/placeholder.jpg",
-    "splashBackgroundColor": "#eeccff",
-    "webhookUrl": "https://ethtools.vercel.app/"
+    "buttonTitle": "Check this out"
   }
 }
