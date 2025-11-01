@@ -3,6 +3,7 @@ import { Mnemonic, HDNodeWallet, Wallet, isAddress, JsonRpcProvider, formatEther
 
 // Add a 'type' property to classify networks and remove deprecated ones
 export const NETWORKS = {
+// Mainnet Network
   mainnet: {
     name: "Ethereum Mainnet",
     rpcUrl: "https://eth-mainnet.public.blastapi.io",
@@ -45,53 +46,56 @@ export const NETWORKS = {
     currency: "ETH",
     type: 'mainnet' as const,
   },
+
+// Testnet Network
+
   sepolia: {
     name: "Sepolia Testnet",
     rpcUrl: "https://eth-sepolia.public.blastapi.io",
     explorerUrl: "https://sepolia.etherscan.io",
-    currency: "SepoliaETH",
+    currency: "ETH",
     type: 'testnet' as const,
   },
   "base-sepolia": {
     name: "Base Sepolia",
     rpcUrl: "https://base-sepolia-rpc.publicnode.com",
     explorerUrl: "https://sepolia.basescan.org/",
-    currency: "BaseSepoliaETH",
+    currency: "ETH",
     type: 'testnet' as const,
   },
-  holesky: { // Replaced Polygon zkEVM
-    name: "Ethereum Holesky",
-    rpcUrl: "https://ethereum-holesky-rpc.publicnode.com",
-    explorerUrl: "https://holesky.etherscan.io",
-    currency: "HoleskyETH",
+  holesky: { // Mode Sepolia
+    name: "Mode Sepolia",
+    rpcUrl: "https://sepolia.mode.network",
+    explorerUrl: "https://testnet.modescan.io/",
+    currency: "ETH",
     type: 'testnet' as const,
   },
   "optimism-sepolia": {
     name: "Optimism Sepolia",
     rpcUrl: "https://sepolia.optimism.io",
     explorerUrl: "https://sepolia-optimism.etherscan.io",
-    currency: "OpSepoliaETH",
+    currency: "ETH",
     type: 'testnet' as const,
   },
   "arbitrum-sepolia": {
     name: "Arbitrum Sepolia",
     rpcUrl: "https://sepolia-rollup.arbitrum.io/rpc",
     explorerUrl: "https://sepolia.arbiscan.io",
-    currency: "ArbSepoliaETH",
+    currency: "ETH",
     type: 'testnet' as const,
   },
   hoodi: {
     name: "Hoodi Testnet",
     rpcUrl: "https://0xrpc.io/hoodi",
     explorerUrl: "https://hoodi.etherscan.io",
-    currency: "HoodiETH",
+    currency: "ETH",
     type: 'testnet' as const,
   },
   unichain: {
     name: "Unichain Testnet",
     rpcUrl: "https://unichain-sepolia-rpc.publicnode.com",
     explorerUrl: "https://unichain-sepolia.blockscout.com/",
-    currency: "UnichainETH",
+    currency: "ETH",
     type: 'testnet' as const,
   },
 };
