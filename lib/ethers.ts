@@ -90,6 +90,13 @@ export const NETWORKS = {
     explorerUrl: "https://hoodi.etherscan.io",
     currency: "ETH",
     type: 'testnet' as const,
+ },
+  MegaEth: {
+    name: "MegaETH Testnet",
+    rpcUrl: "https://carrot.megaeth.com/rpc",
+    explorerUrl: "https://megaeth-testnet.blockscout.com",
+    currency: "ETH",
+    type: 'testnet' as const,
   },
   unichain: {
     name: "Unichain Testnet",
