@@ -160,7 +160,7 @@ export const NETWORKS = {
 
   sepolia: {
     name: "Sepolia Testnet",
-    rpcUrl: "https://eth-sepolia.public.blastapi.io",
+    rpcUrl: "https://ethereum-sepolia-rpc.publicnode.com",
     explorerUrl: "https://sepolia.etherscan.io",
     currency: "ETH",
     type: 'testnet' as const,
