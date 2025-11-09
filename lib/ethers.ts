@@ -11,6 +11,7 @@ export const NETWORKS = {
     currency: "ETH",
     type: 'mainnet' as const,
   },
+
   optimism: {
     name: "Optimism",
     rpcUrl: "https://mainnet.optimism.io",
@@ -18,6 +19,7 @@ export const NETWORKS = {
     currency: "ETH",
     type: 'mainnet' as const,
   },
+
   arbitrum: {
     name: "Arbitrum One",
     rpcUrl: "https://arb1.arbitrum.io/rpc",
@@ -25,6 +27,7 @@ export const NETWORKS = {
     currency: "ETH",
     type: 'mainnet' as const,
   },
+
   polygon: {
     name: "Polygon Mainnet",
     rpcUrl: "https://polygon-rpc.com",
@@ -32,13 +35,15 @@ export const NETWORKS = {
     currency: "MATIC",
     type: 'mainnet' as const,
   },
+
   bsc: {
     name: "BNB Smart Chain",
-    rpcUrl: "https://binance.llamarpc.com", // Updated RPC
+    rpcUrl: "https://binance.llamarpc.com",
     explorerUrl: "https://bscscan.com",
     currency: "BNB",
     type: 'mainnet' as const,
   },
+
   base: {
     name: "Base",
     rpcUrl: "https://base.llamarpc.com",
@@ -46,6 +51,110 @@ export const NETWORKS = {
     currency: "ETH",
     type: 'mainnet' as const,
   },
+
+  avalanche: {
+    name: "Avalanche C-Chain Mainnet",
+    rpcUrl: "https://avalanche-c-chain-rpc.publicnode.com",
+    explorerUrl: "https://snowtrace.io",
+    currency: "AVAX",
+    type: 'mainnet' as const,
+  },
+
+  fantom: {
+    name: "Fantom Opera Mainnet",
+    rpcUrl: "https://rpc.fantom.network",
+    explorerUrl: "https://explorer.fantom.network",
+    currency: "FTM",
+    type: 'mainnet' as const,
+  },
+
+  celo: {
+    name: "Celo Mainnet",
+    rpcUrl: "https://rpc.ankr.com/celo",
+    explorerUrl: "https://celoscan.io",
+    currency: "CELO",
+    type: 'mainnet' as const,
+  },
+
+  scroll: {
+    name: "Scroll Mainnet",
+    rpcUrl: "https://scroll-rpc.publicnode.com",
+    explorerUrl: "https://scrollscan.com",
+    currency: "ETH",
+    type: 'mainnet' as const,
+  },
+
+  zksyncera: {
+    name: "zkSync Era Mainnet",
+    rpcUrl: "https://rpc.ankr.com/zksync_era",
+    explorerUrl: "https://era.zksync.network",
+    currency: "ETH",
+    type: 'mainnet' as const,
+  },
+
+  gnosis: {
+    name: "Gnosis Chain (xDai) Mainnet",
+    rpcUrl: "https://gnosis-rpc.publicnode.com",
+    explorerUrl: "https://gnosisscan.io",
+    currency: "XDAI",
+    type: 'mainnet' as const,
+  },
+
+  mantle: {
+    name: "Mantle Mainnet",
+    rpcUrl: "https://mantle-rpc.publicnode.com",
+    explorerUrl: "https://mantlescan.xyz",
+    currency: "MNT",
+    type: 'mainnet' as const,
+  },
+
+  metis: {
+    name: "Metis Andromeda Mainnet",
+    rpcUrl: "https://metis-rpc.publicnode.com",
+    explorerUrl: "https://metisscan.info",
+    currency: "METIS",
+    type: 'mainnet' as const,
+  },
+
+  moonbeam: {
+    name: "Moonbeam Mainnet",
+    rpcUrl: "https://moonbeam-rpc.publicnode.com",
+    explorerUrl: "https://moonscan.io",
+    currency: "GLMR",
+    type: 'mainnet' as const,
+  },
+
+  zetachain: {
+    name: "ZetaChain Mainnet",
+    rpcUrl: "https://zetachain-evm.blockpi.network/v1/rpc/public",
+    explorerUrl: "https://zetascan.com",
+    currency: "ZETA",
+    type: 'mainnet' as const,
+  },
+
+  kaia: {
+    name: "KAIA Mainnet",
+    rpcUrl: "https://rpc.ankr.com/kaia",
+    explorerUrl: "https://kaiascan.io",
+    currency: "KAIA",
+    type: 'mainnet' as const,
+  },
+
+  berachain: {
+    name: "Berachain Mainnet",
+    rpcUrl: "https://berachain-rpc.publicnode.com",
+    explorerUrl: "https://berascan.com",
+    currency: "BERA",
+    type: 'mainnet' as const,
+  },
+
+ somnia: {
+    name: "Somnia Mainnet",
+    rpcUrl: "https://somnia-rpc.publicnode.com",
+    explorerUrl: "https://explorer.somnia.network",
+    currency: "SOMI",
+    type: 'mainnet' as const,
+  },  
 
 // Testnet Network
 
@@ -63,7 +172,7 @@ export const NETWORKS = {
     currency: "ETH",
     type: 'testnet' as const,
   },
-  holesky: { // Mode Sepolia
+  mode-sepolia: { // Mode Sepolia
     name: "Mode Sepolia",
     rpcUrl: "https://sepolia.mode.network",
     explorerUrl: "https://testnet.modescan.io/",
@@ -91,7 +200,7 @@ export const NETWORKS = {
     currency: "ETH",
     type: 'testnet' as const,
  },
-  MegaEth: {
+  megaeth: {
     name: "MegaETH Testnet",
     rpcUrl: "https://carrot.megaeth.com/rpc",
     explorerUrl: "https://megaeth-testnet.blockscout.com",
