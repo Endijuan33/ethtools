@@ -172,7 +172,7 @@ export const NETWORKS = {
     currency: "ETH",
     type: 'testnet' as const,
   },
-  mode-sepolia: { // Mode Sepolia
+  "mode-sepolia": {
     name: "Mode Sepolia",
     rpcUrl: "https://sepolia.mode.network",
     explorerUrl: "https://testnet.modescan.io/",
