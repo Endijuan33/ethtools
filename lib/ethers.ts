@@ -207,6 +207,13 @@ export const NETWORKS = {
     currency: "ETH",
     type: 'testnet' as const,
   },
+  "giwa-sepolia": {
+    name: "GIWA Sepolia",
+    rpcUrl: "https://sepolia-rpc.giwa.io/",
+    explorerUrl: "https://sepolia-explorer.giwa.io",
+    currency: "ETH",
+    type: 'testnet' as const,
+  },
   unichain: {
     name: "Unichain Testnet",
     rpcUrl: "https://unichain-sepolia-rpc.publicnode.com",
